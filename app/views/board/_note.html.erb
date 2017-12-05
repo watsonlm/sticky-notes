@@ -1,0 +1,10 @@
+<div class="row">
+        <% @notes.each do |note| %>
+        <div class="col s12 m4">
+            <div class="card-panel center-align yellow lighten-4">
+                <%= note.message %>
+            </div>
+        </div>
+        <% end %>
+    
+</div>
