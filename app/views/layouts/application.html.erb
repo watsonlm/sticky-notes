@@ -5,8 +5,21 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="blue-grey">
+  <nav class = "amber darken-2">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Sticky Notes</a>
+        <ul class="right hide-on-med-and-down">
+          <!-- Add button opens thing for writing new note -->
+          <li><a class="waves-effect waves-light btn-floating modal-trigger" href=".#modal1"><i class="material-icons">add</i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
   <div class="container">
     <%= yield %>
   </div>

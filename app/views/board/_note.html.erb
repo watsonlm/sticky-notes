@@ -1,10 +1,19 @@
 <div class="row">
-        <% @notes.each do |note| %>
-        <div class="col s12 m4">
-            <div class="card-panel center-align yellow lighten-4">
-                <%= note.message %>
-            </div>
-        </div>
+    <% @notes.each do |note| %>
+    <div class="col s12 m4">
+        <% note_color = "" %>
+        <% case note.status %>
+          <% when "new" %>
+            <% note_color = "yellow lighten-4" %>
+          <% when "in progress" %>
+            <% note_color = "pink lighten-5" %>
+          <% when "complete" %>
+            <% note_color = "green accent-1" %>
         <% end %>
-    
+              
+        <div class="note-class card-panel hoverable center-align <%= note_color %>">
+            <%= note.message %>
+        </div>
+    </div>
+    <% end %>
 </div>

@@ -1,3 +1,16 @@
-<h1>Board#index</h1>
-<p>Find me in app/views/board/index.html.erb</p>
+<%= javascript_include_tag params[:controller] %>
+<div class="row">
+    <div class="col m12">
+        <div class="card-panel center-align">
+            <%= form_for @note do |f| %>
+                <%= f.text_field :message, placeholder: "Suggestion",  class: "input-field col s6" %>
+                <%= f.hidden_field :status, value: "new" %>
+                <%= button_tag(class: "waves-effect waves-light btn") do %>
+                    <i class='material-icons'>create</i>
+                <% end %>
+            <% end %>
+        </div>
+    </div>
+</row>
 <%= render "note" %>
+</div
