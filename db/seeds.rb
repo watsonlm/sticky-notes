@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Note.create(message: 'Hello I am a note', status: 'new')
+Note.create(message: 'Unlike the other note someone is working on me', status: 'in progress')
+Note.create(message: 'Perhaps someone will post more notes', status: 'new')
